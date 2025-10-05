@@ -54,6 +54,7 @@ router.route('/')
   .post(validator.addOrderItems, validateRequest, protect, addOrderItems)
   .get(protect, admin, getOrders);
 
+  
 router.get('/my-orders', protect, getMyOrders);
 router.get('/:id', validator.getOrderById, validateRequest, protect, getOrderById);
 router.put('/:id/pay', validator.updateOrderToPaid, validateRequest, protect, updateOrderToPaid);
